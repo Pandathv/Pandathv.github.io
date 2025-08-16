@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="songWave.css" />
+    <link rel="stylesheet" href="scrol.css" />
+    <link rel="stylesheet" href="banner.css" />
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="reserva.css">
+    <link rel="stylesheet" href="medidas.css" />
+    <link rel="stylesheet" href="galeria.css">
+    <script src="img.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+            <!--titulo simple-->
+            <section class="textos-header">
+                    <h1>¡Feliz Cumpleaños Herlinda!</h1>
+            </section>
+    </header>
+    <section id="songs" class="scroll-section animate-on-scroll slide-in-right">
+        <div class="music-player-container">
+            <div class="music-loader">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <!--musica-->
+            <div class="song-info">
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <span id="totalTime">0:00</span>
+                </div>
+                <h2 id="songTitle"></h2>
+            </div>
+
+            <div class="controls-bottom">
+                <div class="player-buttons">
+                    <i class="fas fa-step-backward" id="prevBtn"></i>
+                    <i class="fas fa-play" id="playPauseBtn"></i>
+                    <i class="fas fa-step-forward" id="nextBtn"></i>
+                </div>
+
+                <div class="volume-control">
+                    <i class="fas fa-volume-up" id="volumeIcon"></i>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <audio id="audioPlayer" src="./song/cucaracha con autotune (letra).mp3" preload="auto"></audio>
+    <audio id="audioPlayer" src="./song/Arctic Monkeys - Do I Wanna Know_ (Official Video).mp3" preload="auto"></audio>
+
+    <section class="scroll-section animate-on-scroll fade-in">
+        <canvas id="c"></canvas>
+        <script src="baner.js"></script>
+    </section>
+    <!--tarjeta de cumple-->
+    <section id="cardt" class="scroll-section animate-on-scroll slide-in-left">
+        <div class="birth-card">
+            <h1 class="galeria">Galeria</h1>
+            <!-- Portada (exterior) -->
+            <div class="cover-outer">
+                <img id="out" width="100%" alt="Portada">
+            </div>
+
+            <!-- Contenido (texto) -->
+            <div class="text">
+                <h2 class="title">¡Feliz Cumpleaños! <br> Herlinda</h2>
+                <h4>
+                    Que en este día especial, disfrutes de cada momento con alegría y amor.
+                    <br>Que la vida te regale muchos más años llenos de felicidad, salud y buenos momentos.
+                    <br>¡Te queremos mucho!
+                </h4>
+                <h4>Esperamos que la pase genial</h4>
+            </div>
+
+            <!-- Contraportada (interior/fondo) -->
+            <div class="cover-inner">
+                <img id="in" width="100%" alt="Contraportada">
+            </div>
+        </div>
+    </section>
+    <!--galeria de fotos-->
+    <section class="scroll-section animate-on-scroll slide-in-left" id="galeri">
+        <!-- Contenedor principal con imagen de fondo -->
+        <div class="slider-box">
+            <ul>
+                <li>
+                    <img src="img/1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/5.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--parte final-->
+    <section id="reser" class="scroll-section animate-on-scroll fade-in-up">
+        <h4 class="parti">¡Asegura tu participación en esta fiesta!
+            <br>¡Reserva tu lugar ahora!
+        </h4>
+        <div class="reserva">
+            <a href="https://youtu.be/ue9vBU0bjA4?si=IoAVFmQw3lgOwnNt" target="_blank">
+                <button class="what">
+                    <img src="img/wha.png" alt="whats" data-gif="img/gifts.gif" class="gif-hover">
+                </button></a>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="soong.js"></script>
+    <script src="scroll.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+#galeri {
+    background-color: black;
+    padding: 20px 0; /* Añade espacio interno */
+}
+
+.slider-box {
+    width: 90%;
+    height: auto; /* Cambiado a auto para mejor adaptación */
+    margin: 0 auto; /* Centrado */
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%; /* 100% por cada imagen (ajusta según cantidad) */
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    list-style: none;
+    width: 25%; /* 100% dividido entre el número de imágenes (4 en este caso) */
+    flex-shrink: 0; /* Evita que se reduzcan los items */
+    padding: 0 10px; /* Espacio entre imágenes */
+    box-sizing: border-box;
+}
+
+.slider-box img {
+    width: 100%; /* Ocupa el 100% del espacio del li */
+    height: 70vw; /* Mantiene proporción */
+    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    display: block;
+}
+
+@keyframes slide {
+
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    40% { margin-left: -100%; }
+
+    45% { margin-left: -200%; }
+    60% { margin-left: -200%; }
+
+    65% { margin-left: -300%; }
+    80% { margin-left: -300%; }
+
+    85% { margin-left: -400%; }
+    100% { margin-left: -400%; }
+    
+}

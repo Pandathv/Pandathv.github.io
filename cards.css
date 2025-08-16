@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nobile&display=swap');
+
+#cardt{
+    background-color: #f8c8c8;
+}
+.birth-card {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    border: 10px solid #f8c8c8;
+    box-shadow: inset 10px 0px 15px rgba(0, 0, 0, 0.1);
+    perspective: 800px;
+    overflow: hidden; /* Añadido para evitar fugas visuales */
+}
+
+/* Texto */
+.text {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.365);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    font-family: 'Nobile', sans-serif;
+    text-align: center;
+    border-radius: 5px; /* Suaviza bordes */
+}
+
+.text h4 {
+    font-size: 1.5em;
+    color: #086cf9;
+    line-height: 1;
+    font-style: italic;
+    margin: 10px auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.689);
+}
+
+.text .title {
+    font-size: 2em;
+    margin: 20px auto;
+    color: #f11818;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.689);
+}
+
+.galeria{
+    font-size: 1.5em;
+    margin: 20px auto;
+    color: #d46a6a;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.689);
+}
+
+
+.cover-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 10px solid #f8c8c8;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transform: rotateY(0deg); /* Estado inicial: cerrado */
+    transition: all 0.8s ease-in-out;
+    z-index: 3; /* Mayor que el texto y contraportada */
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    background-color: #f8c8c8; /* Fondo sólido por si la imagen falla */
+}
+
+.cover-outer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contraportada (fondo permanente) */
+.cover-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 10px solid #f8c8c8;
+    z-index: 0; /* Detrás de todo */
+}
+
+.cover-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Efecto hover */
+.birth-card:hover .cover-outer {
+    transform: rotateY(-160deg); /* Giro completo */
+}
+

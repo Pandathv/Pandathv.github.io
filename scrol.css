@@ -1,0 +1,88 @@
+
+/* --- Estilos para las Secciones de Scroll y Animaciones --- */
+
+/* Estilo base para todas las secciones que se animarán */
+.scroll-section {
+    width: 100%; /* Ancho de las secciones */
+    max-width: 100%; /* Límite de ancho para secciones largas */
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Para que ocupe al menos una pantalla completa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    color: #000000;
+}
+
+/* CLASES DE ANIMACIÓN INICIALES (estado antes de ser visible) */
+.animate-on-scroll {
+    opacity: 0; /* Empiezan invisibles */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición por defecto */
+}
+
+/* CLASE DE ANIMACIÓN FINAL (estado cuando es visible) */
+.animate-on-scroll.is-visible {
+    opacity: 1; /* Se vuelven visibles */
+    transform: none; /* Vuelven a su posición original */
+}
+
+.scroll-section .animate-on-scroll .fade-in{
+    height: 600px; 
+    background-color: #2a2a2a; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 2.5em; 
+    margin-bottom: 80px;
+}
+
+.scroll-section .animate-on-scroll .slide-in-left{
+    height: 500px; 
+    background-color: #000000; 
+    color: white; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    font-size: 2em; 
+    margin-bottom: 80px;
+}
+
+/* TIPOS DE ANIMACIÓN ESPECÍFICOS */
+
+.fade-in {
+    transform: translateY(0); /* Asegura que no haya transformaciones residuales */
+}
+.fade-in.is-visible {
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translateX(-100px); /* Empieza fuera por la izquierda */
+}
+.slide-in-left.is-visible {
+    opacity: 1;
+    transform: translateX(0); /* Vuelve a la izquierda */
+}
+
+.slide-in-right {
+    transform: translateX(100px); /* Empieza fuera por la derecha */
+}
+.slide-in-right.is-visible {
+    opacity: 1;
+    transform: translateX(0); /* Vuelve a la derecha */
+}
+
+.fade-in-up {
+    transform: translateY(50px); /* Empieza un poco abajo */
+}
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Sube a su posición */
+}

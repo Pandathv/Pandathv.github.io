@@ -1,0 +1,254 @@
+body {
+    background: fixed;
+    background: linear-gradient(to bottom,
+            rgb(93, 162, 236),
+            rgb(154, 194, 227));
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Apila los elementos verticalmente (reproductor, secciones) */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    /* Un poco de padding general para que no se pegue a los bordes */
+    box-sizing: border-box;
+    /* Para incluir padding en el ancho/alto */
+}
+
+/* --- Estilos para el Header --- */
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/gifts.gif);
+    position: relative;
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el header */
+    background-attachment: fixed;
+}
+
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 30px;
+    color: #5893eb;
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+}
+
+
+/* --- Estilos para el Contenedor de Canciones --- */
+#songs {
+    background-color: #1a1a1a;
+    background-image: url(img/dance.gif);
+}
+
+/* --- Estilos para el Contenedor Principal del Reproductor --- */
+.music-player-container {
+    position: relative;
+    width: 350px;
+    /* Ajusta este ancho según necesites */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre los elementos internos del reproductor */
+    background-color: #1a1a1a;
+    /* Fondo para el reproductor */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+    /* Espacio entre el reproductor y la primera sección de scroll */
+}
+
+/* --- Visualizador de Música --- */
+.music-loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.line {
+    width: 10px;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,
+            rgb(52, 52, 232),
+            rgb(93, 162, 236));
+    transform-origin: bottom;
+}
+
+/* Animación de las líneas */
+.line1 {
+    animation: dance 0.5s ease alternate infinite;
+}
+
+.line2 {
+    animation: dance 0.5s 0.2s ease alternate infinite;
+}
+
+.line3 {
+    animation: dance 0.5s 0.4s ease alternate infinite;
+}
+
+@keyframes dance {
+    0% {
+        height: 10%;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
+
+/* --- Información de la Canción y Barra de Progreso --- */
+.song-info {
+    width: 100%;
+    text-align: center;
+    color: azure;
+    /* Para que el texto sea visible */
+    margin-top: 20px;
+}
+
+.songTitle {
+    margin: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(25, 78, 124);
+    /* Tu color original, pero puedes ajustar para que sea legible */
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #9ccbf5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #1d51b9;
+    /* Color de la barra de progreso */
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+/* --- Controles de Reproducción y Volumen --- */
+.controls-bottom {
+    display: flex;
+    flex-direction: row;
+    /* Alinea los sub-contenedores en fila */
+    justify-content: space-around;
+    /* Distribuye el espacio */
+    gap: 15px;
+    /* Espacio entre el grupo de botones y el control de volumen */
+    align-items: center;
+    width: 100%;
+    /* Ocupa el ancho completo del reproductor */
+    margin-top: 20px;
+}
+
+.player-buttons {
+    display: flex;
+    /* Para alinear los íconos de prev/play/next en fila */
+    gap: 25px;
+    /* Espacio entre los botones individuales */
+    font-size: 2em;
+    /* Tamaño de los íconos de reproducción */
+}
+
+i {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #e0e0e0;
+    /* Color general de los íconos */
+}
+
+i:hover {
+    transform: scale(1.15);
+    color: #7c91d3;
+    /* Color de hover */
+}
+
+/* --- Estilos para el Control de Volumen --- */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espacio entre el ícono de volumen y el slider */
+    font-size: 1.2em;
+    /* Tamaño del ícono de volumen */
+    width: auto;
+    /* Permite que el contenedor se ajuste a su contenido */
+}
+
+#volumeSlider {
+    width: 80px;
+    height: 5px;
+
+    background: #555;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* Más redondo */
+    background: #1d20b9;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+#volumeSlider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1d68b9;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+#volumeSlider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1d70b9 var(--volume-progress, 100%), #555 var(--volume-progress, 100%));
+    height: 5px;
+    border-radius: 5px;
+}
+
+#volumeSlider::-moz-range-track {
+    background: linear-gradient(to right, #1d73b9 var(--volume-progress, 100%), #555 var(--volume-progress, 100%));
+    height: 5px;
+    border-radius: 5px;
+}
+
+/* Estilo para el ícono de volumen cuando está muteado */
+.volume-control .fas.fa-volume-mute {
+    color: rgb(126, 34, 34);
+}

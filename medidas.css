@@ -1,0 +1,225 @@
+
+/* Estilos base para móviles (hasta 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+
+     .music-player-container {
+        width: 60vw;
+        padding: 30px;
+    }
+
+    .player-buttons {
+        gap: 30px;
+        font-size: 1em;
+    }
+    
+    .volume-control {
+        font-size: 1em;
+    }
+    
+    #volumeSlider {
+        width: 70px;
+    }
+    #currentTime, #totalTime, #songTitle {
+        font-size: 1.1em;
+    }
+    
+    .title h1 {
+        font-size: 1rem;
+    }
+    
+    .parti {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .what {
+        width: 15vw;
+        height: 15vw;
+        margin: 20px auto;
+    }
+    
+    .what img {
+        height: 15vw;
+        width: 15vw;
+    }
+    
+    .scroll-section {
+        padding: 20px 10px;
+        margin: 10px 0;
+        height: auto;
+    }
+    
+    .birth-card {
+        width: 160vw;
+        height: 170vw;
+    }
+    
+    .text h4 {
+        font-size: 1.1rem;
+    }
+    
+    .text .title, .galeria {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablets pequeñas (481px - 767px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    
+    .music-player-container {
+        width: 60vw;
+        padding: 30px;
+    }
+    
+    .birth-card {
+        width: 90vw;
+        height: 100vw;
+    }
+    
+    .what {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .what img {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+/* Pantallas medianas (769px - 900px) */
+@media (min-width: 769px) and (max-width: 900px) {
+    html {
+        font-size: 16px;
+    }
+    
+    .music-player-container {
+        width: 80%;
+    }
+     .player-buttons {
+        gap: 30px;
+        font-size: 2em;
+    }
+    
+    .volume-control {
+        font-size: 2em;
+    }
+    
+    #volumeSlider {
+        width: 80px;
+    }
+    #currentTime, #totalTime, #songTitle {
+        font-size: 1.5em;
+    }
+
+    
+    .birth-card {
+        width: 80vw;
+        height: 90vw;
+    }
+    
+    
+    .text .title, .galeria {
+        font-size: 3rem;
+    }
+
+    .text h4 {
+        font-size: 2.5rem;
+    }
+
+    
+    .parti {
+        font-size: 2rem;
+    }
+    
+    .what {
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    .what img {
+        height: 15vw;
+        width: 15vw;
+    }
+    
+    .scroll-section {
+        padding: 30px 15px; 
+        margin: 20px 0;
+    }
+}
+
+/* Tablets medianas/grandes (900px - 1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .music-player-container {
+        width: 80%;
+        padding: 30px;
+    }
+    
+    .player-buttons {
+        gap: 30px;
+        font-size: 1em;
+    }
+    
+    .volume-control {
+        font-size: 1em;
+    }
+    
+    #volumeSlider {
+        width: 80px;
+    }
+    #currentTime, #totalTime, #songTitle {
+        font-size: 1em;
+    }
+
+    
+    .birth-card {
+        width: 70vw;
+        height: 70vw;
+    }
+    
+    .text h4 {
+        font-size: 1.5rem;
+    }
+    
+    .text .title, .galeria {
+        font-size: 2.5rem;
+    }
+    
+
+    
+    .parti {
+        font-size: 2.5rem;
+    }
+    
+    .what {
+        width: 10vw;
+        height: 10vw;
+    }
+    
+    .what img {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .scroll-section {
+        padding: 30px 15px; 
+        margin: 20px 0;
+    }
+}
+
+
+

@@ -1,0 +1,46 @@
+#reser {
+    background-image: url('img/snoopy.gif');
+    ;
+}
+
+.parti {
+    color: #fce702;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el botón de WhatsApp */
+.what {
+    background-color: #fcfcfc;
+    color: white;
+    border: none;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 100%;
+    position: relative;
+    top: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.what:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.gif-hover {
+    cursor: pointer;
+}
+
+.what img {
+    width: auto;
+    height: 5vw;
+    border-radius: 100%;
+    overflow: hidden;
+}
